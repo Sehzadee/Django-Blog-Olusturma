@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block body %}
+<div class="jumbotron text-center">
+    <h3>Emrullah Blog Sayfasına Hoşgeldiniz</h3>
+    <p> Bu Blogta Bölümümüzle ve Okulumuzla İlgili Duyurular Gelişmeler Ders Notları ve Makaleler Paylaşılacaktır</p>
+
+</div>
+
+<div class="jumbotron text-center">
+    <p> Yardımlarınız İçin Teşekkürler </p>
+</div>
+
+
+<p>
+    {% if request.user.is_authenticated %} Hoşgeldiniz, {{request.user.username}} {% else %} Lütfen Giriş Yapın! {% endif %}
+</p>
+
+{% endblock body %}
